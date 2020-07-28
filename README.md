@@ -58,7 +58,7 @@ The following files are available for the train and test data. Their description
 
 ### Instruction
 1. change current directory to R work directory 
-2. load `run_analysis.R` script in the `data` directory 
+2. load `run_analysis.R` script in the `script` directory 
 3. source `run_analysis.R` script to initiate the data transformation process 
 
 
