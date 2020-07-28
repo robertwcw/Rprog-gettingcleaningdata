@@ -56,9 +56,10 @@ The following files are available for the train and test data. Their description
 
 
 ### Instruction
-1. change current directory to project working directory (`wd`)
-2. load `run_analysis.R` script in the `wd` directory 
-3. source `run_analysis.R` script to initiate the data transformation process 
+1. Tidyverse package must be installed and present in your R setup, otherwise please run this command install.packages("tidyverse") on your R console.
+2. change current directory to your project working directory (`wd`)
+3. load `run_analysis.R` script in the `wd` directory 
+4. source `run_analysis.R` script to initiate the data transformation process 
 
 
 ### Transformation Process 
