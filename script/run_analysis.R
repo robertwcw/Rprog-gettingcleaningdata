@@ -176,10 +176,10 @@ shardata <- hardata %>%
 
 
 datadir <- paste(".", "data", sep = "/")
-filepath <- paste(datadir, "ucihardata.csv", sep = "/")
-write_csv(hardata, filepath)
-filepath <- paste(datadir, "s_ucihardata.csv", sep = "/")
-write_csv(shardata, filepath)
+filepath <- paste(datadir, "ucihardata.txt", sep = "/")
+write.table(hardata, filepath, row.names = FALSE)
+filepath <- paste(datadir, "s_ucihardata.txt", sep = "/")
+write.table(shardata, filepath, row.names = FALSE)
 
 
 # # CLEANING UP ENVIRONMENT VARIABLES 
