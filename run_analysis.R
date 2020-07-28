@@ -175,8 +175,9 @@ shardata <- hardata %>%
                                         perl = TRUE), mean, na.rm = TRUE))
 
 
-datadir <- paste(".", "data", sep = "/")
-filepath <- paste(datadir, "ucihardata.txt", sep = "/")
+# datadir <- paste("./", "data", sep = "/")
+datadir <- "./"
+filepath <- paste("datadir", "ucihardata.txt", sep = "/")
 write.table(hardata, filepath, row.names = FALSE)
 filepath <- paste(datadir, "s_ucihardata.txt", sep = "/")
 write.table(shardata, filepath, row.names = FALSE)
