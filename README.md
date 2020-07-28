@@ -52,7 +52,7 @@ The following files are available for the train and test data. Their description
 
 ### Project directory structure
 - `working directory`  *(where README.md and CodeBook.md are located)*
-  - `data directory`  *(where samsung data and subsequent tidy data are stored)*
+  - `data directory`  *(where the samsung data and subsequent tidy data are stored)*
 
 
 ### Instruction
