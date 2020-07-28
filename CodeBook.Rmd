@@ -45,9 +45,9 @@ tBodyGyroMean
 tBodyGyroJerkMean  
 
 
-Finally the `Human Activity Recognition` dataset are reshaped, merged and transformed into two separate datasets called **UCHIHARDATA** and **S_UCIHARDATA**, consist of only variables derived from mean and standard deviation of the source dataset.  
-**UCIHARDATA** is non-summarized and ungrouped dataset, output as `ucihardata.csv` text file. 
-**S_UCIHARDATA** is simplified and summarized mean and standard deviation data values for each variable for each activity and each subject, output as `s_ucihardata.csv` text file.
+Finally the `Human Activity Recognition` dataset are reshaped, merged and transformed into two separate datasets called **UCHIHARDATA** and **S_UCIHARDATA**, consist of only variables derived from mean and standard deviation.  
+**UCIHARDATA** is non-summarized and ungrouped dataset, output as `ucihardata.csv` text file to `wd/data/ucihardata.csv`. 
+**S_UCIHARDATA** is simplified and summarized by mean and standard deviation data values for each variable for each activity and each subject, output as `s_ucihardata.csv` text file to `wd/data/s_ucihardata.csv`.
 
 
 
