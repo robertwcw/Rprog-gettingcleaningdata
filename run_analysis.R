@@ -189,7 +189,7 @@ unlink(paste(datadir, "UCI HAR Dataset", sep = "/") , recursive = TRUE)
 rm(tmpfil, datadir, filepath, h, i, j, k) 
 rm(x_test, y_test, z_test, zy_test, x_train, y_train, z_train, zy_train, x_data) 
 rm(zy_data, zydata, act_labels, x_features) 
-# rm(hardata, shardata, xdata) 
+rm(hardata, shardata, xdata) 
 
 detach(package:ggplot2)
 detach(package:tibble)

@@ -51,14 +51,13 @@ The following files are available for the train and test data. Their description
 
 
 ### Project directory structure
-- `work directory`  *(where README.md and CodeBook.md are located)*
-  - `data directory`  *(where raw data and tidy data are stored)*
-  - `script directory`  *(where run_analysis.R script is located)*
+- `working directory`  *(where README.md and CodeBook.md are located)*
+  - `data directory`  *(where samsung data and subsequent tidy data are stored)*
 
 
 ### Instruction
-1. change current directory to R work directory 
-2. load `run_analysis.R` script in the `script` directory 
+1. change current directory to project working directory 
+2. load `run_analysis.R` script in the `working directoryt` directory 
 3. source `run_analysis.R` script to initiate the data transformation process 
 
 
@@ -66,8 +65,6 @@ The following files are available for the train and test data. Their description
 
 This section briefly describes the steps involved in the transformation process.
 
-1. setwd() -> `wd` (work directory)
-2. source the `run_analysis.R` script stored in `script` directory
 1. download `UCI HAR Dataset` from the internet cloud to the local temporary file holder
 2. unzip `UCI HAR Dataset` save output file to `wd/data/` -> `wd/data/UCI HAR Dataset/`
 3. `wd/data/UCI HAR Dataset/` directory layout 
