@@ -56,8 +56,8 @@ The following files are available for the train and test data. Their description
 
 
 ### Instruction
-1. change current directory to project working directory 
-2. load `run_analysis.R` script in the `working directoryt` directory 
+1. change current directory to project working directory (`wd`)
+2. load `run_analysis.R` script in the `wd` directory 
 3. source `run_analysis.R` script to initiate the data transformation process 
 
 
@@ -65,9 +65,10 @@ The following files are available for the train and test data. Their description
 
 This section briefly describes the steps involved in the transformation process.
 
-1. download `UCI HAR Dataset` from the internet cloud to the local temporary file holder
-2. unzip `UCI HAR Dataset` save output file to `wd/data/` -> `wd/data/UCI HAR Dataset/`
-3. `wd/data/UCI HAR Dataset/` directory layout 
+1. download samsung `UCI HAR Dataset` from the internet cloud to a local temporary file holder. 
+
+2. unzip `UCI HAR Dataset` save output file to `wd/data/UCI HAR Dataset/`.
+   `wd/data/UCI HAR Dataset/` directory layout 
    + activity_labels.txt 
    + features.txt 
    + features_info.txt 
@@ -82,14 +83,22 @@ This section briefly describes the steps involved in the transformation process.
      + subject_train.txt 
      + X_train.txt 
      + Y_train.txt 
-4. read_lines(`activity_labels.txt`, `features.txt`) from `wd/data/UCI HAR Dataset/` 
-5. read_delim(`X_test.txt`, `Y_test.txt`, `subject_test.txt`) from `wd/data/UCI HAR Dataset/test/` 
-6. read_delim(`X_train.txt`, `Y_train.txt`, `subject_train.txt`) from `wd/data/UCI HAR Dataset/train` 
-7. bind `activity_labels` with `subject_train` and `subject_test` to create activity-subject value-pairs 
-9. bind `train` HAR data and `test` HAR data with activity-subject value-pairs to create `ucihardata` dataset consists of variables of mean and standard deviation 
-9. write.table(`ucihardata`) save output file to `wd/ucihardata.txt` 
-10. summarize `ucihardata` having mean calculated on each variable for each activity and each subject to create `s_ucihardata` dataset 
-11. write.table(`s_ucihardata`) save output file to `wd/s_ucihardata.txt` 
+
+3. read_lines(`activity_labels.txt`, `features.txt`) from `wd/data/UCI HAR Dataset/`. 
+
+4. read_delim(`X_test.txt`, `Y_test.txt`, `subject_test.txt`) from `wd/data/UCI HAR Dataset/test/`. 
+
+5. read_delim(`X_train.txt`, `Y_train.txt`, `subject_train.txt`) from `wd/data/UCI HAR Dataset/train`. 
+
+6. bind `activity_labels` with `subject_train` and `subject_test` to create activity-subject value-pairs. 
+
+7. bind `train` HAR data and `test` HAR data with activity-subject value-pairs to create `ucihardata` dataset consists of variables of mean and standard deviation. 
+
+8. write.table(`ucihardata`) save output file to `wd/ucihardata.txt`. 
+
+9. summarize `ucihardata` having mean calculated on each variable for each activity and each subject to create `s_ucihardata` dataset. 
+
+10. write.table(`s_ucihardata`) save output file to `wd/s_ucihardata.txt`. 
 
 
 **s_ucihardata.csv is summarized mean and standard deviation data values for each variable for each activity and each subject**
