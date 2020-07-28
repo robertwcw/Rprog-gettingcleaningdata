@@ -66,10 +66,10 @@ The following files are available for the train and test data. Their description
 
 This section briefly describes the steps involved in the transformation process.
 
-1. setwd() -> `wd` (work directory) 
-2. source the `run_analysis.R` script stored in `script` directory 
-1. download `UCI HAR Dataset` from the internet cloud to the local temporary file holder 
-2. unzip `UCI HAR Dataset` save output file to `wd/data/` -> `wd/data/UCI HAR Dataset/` 
+1. setwd() -> `wd` (work directory)
+2. source the `run_analysis.R` script stored in `script` directory
+1. download `UCI HAR Dataset` from the internet cloud to the local temporary file holder
+2. unzip `UCI HAR Dataset` save output file to `wd/data/` -> `wd/data/UCI HAR Dataset/`
 3. `wd/data/UCI HAR Dataset/` directory layout 
    + activity_labels.txt 
    + features.txt 
@@ -90,14 +90,14 @@ This section briefly describes the steps involved in the transformation process.
 6. read_delim(`X_train.txt`, `Y_train.txt`, `subject_train.txt`) from `wd/data/UCI HAR Dataset/train` 
 7. bind `activity_labels` with `subject_train` and `subject_test` to create activity-subject value-pairs 
 9. bind `train` HAR data and `test` HAR data with activity-subject value-pairs to create `ucihardata` dataset consists of variables of mean and standard deviation 
-9. write_csv(`ucihardata`) save output file to `wd/data/ucihardata.csv` 
+9. write.table(`ucihardata`) save output file to `wd/ucihardata.txt` 
 10. summarize `ucihardata` having mean calculated on each variable for each activity and each subject to create `s_ucihardata` dataset 
-11. write_csv(`s_ucihardata`) save output file to `wd/data/s_ucihardata.csv` 
+11. write.table(`s_ucihardata`) save output file to `wd/s_ucihardata.txt` 
 
-
-**ucihardata.csv is non-summarized and ungrouped dataset**
 
 **s_ucihardata.csv is summarized mean and standard deviation data values for each variable for each activity and each subject**
+
+**ucihardata.csv is non-summarized and ungrouped dataset**
 
 End of transformation process.
 
