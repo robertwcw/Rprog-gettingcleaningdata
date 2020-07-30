@@ -11,7 +11,7 @@ library(tidyverse)
 # library(tibble)
 
 
-# Set data directory pathname and temporary file holder for the download file.
+# Set data directory pathname and temporary file holder for the downloaded file.
 # 
 datadir <- paste(".", "data", sep = "/")
 tmpfil <- tempfile()
@@ -175,7 +175,7 @@ shardata <- hardata %>%
                                         perl = TRUE), mean, na.rm = TRUE))
 
 
-datadir <- "./"
+datadir <- paste(".", "data", sep = "/")
 filepath <- paste(datadir, "ucihardata.txt", sep = "/")
 write.table(hardata, filepath, row.names = FALSE)
 filepath <- paste(datadir, "s_ucihardata.txt", sep = "/")
@@ -184,14 +184,13 @@ write.table(shardata, filepath, row.names = FALSE)
 
 # # CLEANING UP ENVIRONMENT VARIABLES 
 # # 
-datadir <- paste("./", "data", sep = "/")
 unlink(tmpfil) 
 unlink(datadir, recursive = TRUE)
-# unlink(paste(datadir, "UCI HAR Dataset", sep = "/") , recursive = TRUE)
+unlink(paste(datadir, "UCI HAR Dataset", sep = "/") , recursive = TRUE)
 rm(tmpfil, datadir, filepath, h, i, j, k) 
 rm(x_test, y_test, z_test, zy_test, x_train, y_train, z_train, zy_train, x_data) 
 rm(zy_data, zydata, act_labels, x_features) 
-rm(hardata, shardata, xdata) 
+# rm(hardata, shardata, xdata) 
 
 detach(package:ggplot2)
 detach(package:tibble)

@@ -2,8 +2,10 @@
 title: "README"
 subtitle: Technical summary of run_analysis.R
 course: Coursera Data Science using R
-output: 
-  pdf_document: 
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
     keep_tex: yes
     fig_caption: yes
 project: Getting and Cleaning data
@@ -75,7 +77,7 @@ This section briefly describes the steps involved in the transformation process.
 
 1. download samsung `UCI HAR Dataset` from the internet cloud to a local temporary file holder. 
 
-2. unzip `UCI HAR Dataset` save output file to `wd/data/UCI HAR Dataset/`.
+2. unzip `UCI HAR Dataset` save output file to `wd/data/UCI HAR Dataset/`.  
    `wd/data/UCI HAR Dataset/` directory layout 
    + activity_labels.txt 
    + features.txt 
@@ -90,8 +92,9 @@ This section briefly describes the steps involved in the transformation process.
      + `Inertial Signals/` 
      + subject_train.txt 
      + X_train.txt 
-     + Y_train.txt 
-
+     + Y_train.txt  
+  
+  
 3. read_lines(`activity_labels.txt`, `features.txt`) from `wd/data/UCI HAR Dataset/`. 
 
 4. read_delim(`X_test.txt`, `Y_test.txt`, `subject_test.txt`) from `wd/data/UCI HAR Dataset/test/`. 
@@ -107,11 +110,11 @@ This section briefly describes the steps involved in the transformation process.
 9. summarize `ucihardata` having mean calculated on each variable for each activity and each subject to create `s_ucihardata` dataset. 
 
 10. write.table(`s_ucihardata`) save output file to `wd/s_ucihardata.txt`. 
+  
+  
+**s_ucihardata.csv is summarized mean and standard deviation data values for each variable for each activity and each subject.**  
 
-
-**s_ucihardata.csv is summarized mean and standard deviation data values for each variable for each activity and each subject**
-
-**ucihardata.csv is non-summarized and ungrouped dataset**
-
+**ucihardata.csv is non-summarized, ungrouped and untidied dataset.**  
+  
 End of transformation process.
 
