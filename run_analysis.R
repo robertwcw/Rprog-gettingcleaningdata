@@ -3,12 +3,9 @@
 # 
 
 library(parallel)
-library(tidyverse)
-# library(readr)
-# library(tidyr)
-# library(dplyr)
-# library(stringr)
-# library(tibble)
+library(readr)
+library(dplyr)
+library(stringr)
 
 
 # Set data directory pathname and temporary file holder for the downloaded file.
@@ -185,20 +182,13 @@ write.table(shardata, filepath, row.names = FALSE)
 # # CLEANING UP ENVIRONMENT VARIABLES 
 # # 
 unlink(tmpfil) 
-# unlink(datadir, recursive = TRUE)
 unlink(paste(datadir, "UCI HAR Dataset", sep = "/") , recursive = TRUE)
 rm(tmpfil, datadir, filepath, h, i, j, k) 
 rm(x_test, y_test, z_test, zy_test, x_train, y_train, z_train, zy_train, x_data) 
 rm(zy_data, zydata, act_labels, x_features) 
 rm(hardata, shardata, xdata)
 
-detach(package:ggplot2)
-detach(package:tibble)
-detach(package:tidyr)
-detach(package:readr)
-detach(package:purrr)
-detach(package:dplyr)
-detach(package:stringr)
-detach(package:forcats)
-detach(package:tidyverse, unload = TRUE)
+detach(package:readr, unload = TRUE)
+detach(package:dplyr, unload = TRUE)
+detach(package:stringr, unload = TRUE)
 
